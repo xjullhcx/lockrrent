@@ -13,6 +13,11 @@ console.log('hola soy Myapp   ' );
 
 let Locker = require('./ControlerRPI/LockerControlerRPI');
 
+app.get('/OpenDoor',function (req,res){
+  Locker.LockerOpenDoor(1);
+  res.status(200).send('opening Door');
+})
+
 app.get('/Locker', function (req, res) {
   console.log('all Locker State');
   res.status(200).send(Locker.LocketStadeUpdate());

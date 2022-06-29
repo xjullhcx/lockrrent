@@ -13,13 +13,19 @@ const LocketStadeUpdate = () => {
 
     Locker = [
         { IdLocker: IdLocker, Idcasillero: Idcasillero, IdEstadoPuerta: IdEstadoPuerta, IdEstadoPrestamo: IdEstadoPrestamo },
-        { IdLocker: 002, Idcasillero: 001, IdEstadoPuerta: 'Close', IdEstadoPrestamo: 'available' }];
+        { IdLocker: 2, Idcasillero: 001, IdEstadoPuerta: 'Close', IdEstadoPrestamo: 'available' }];
 
     return Locker;
 }
 
+const LockerOpenDoor =(IdLocker)=>{
+    if (IdLocker === 1) { LockerN1.Opendoor(); }
+    
+    return;
+}
 
 
 module.exports = {
-    LocketStadeUpdate
+    LocketStadeUpdate,
+    LockerOpenDoor
 }

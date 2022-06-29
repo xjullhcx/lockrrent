@@ -41,6 +41,14 @@ class LockerClass {
         return;
     };
 
+    unexportOnClose() { //function to run when exiting program
+
+        this.GpioReadDoorNumber = unexport();
+        this.GpioWriteDoorNumber = writeSync(0);
+        this.GpioWriteDoorNumber = unexport();
+        
+      };
+
 }
 ////////////////////////////////////////////
 //            Creacion de Objetos        //
